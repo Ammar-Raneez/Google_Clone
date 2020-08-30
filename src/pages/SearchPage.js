@@ -2,7 +2,7 @@ import React from 'react'
 import './SearchPage.css'
 import { useStateValue } from '../components/StateProvider';
 import useGoogleSearch from '../useGoogleSearch';
-import response from '../response';
+// import response from '../response';
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
@@ -22,9 +22,9 @@ function SearchPage() {
     //*copy this response and use this whilst developing
 
     //actual api call
-    // const { data } = useGoogleSearch();
+    const { data } = useGoogleSearch();
     //mock api call
-    const data = response;
+    // const data = response;
 
     console.log(data)
 
