@@ -15,14 +15,14 @@ import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
 
 function SearchPage() {
-    const [{ term }] = useStateValue();
+    const [{ term }, dispatch] = useStateValue();
 
     //*usually API's have a daily quota limit, to get around this do a single fetch
     //*then go onto the console -> network -> all -> response 
     //*copy this response and use this whilst developing
 
     //actual api call
-    const { data } = useGoogleSearch();
+    const { data } = useGoogleSearch(term);
     //mock api call
     // const data = response;
 
@@ -87,7 +87,7 @@ function SearchPage() {
             {term && (
                 <div className="searchPage__results">
                     <p className="searchPage__resultCount">
-                        About {data?.searchInformation.formattedTotalResults} results ({data.searchInformation.formattedSearchTime} seconds) for {term}
+                        About {data?.searchInformation?.formattedTotalResults} results ({data?.searchInformation?.formattedSearchTime} seconds) for {term}
                     </p>
 
                     {data?.items.map(item => (
