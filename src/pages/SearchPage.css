@@ -1,0 +1,113 @@
+.searchPage__header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 100;
+    align-items: flex-start;
+    padding: 20px;
+    border-bottom: 0.1px solid #f7f7f7;
+}
+
+.searchPage__headerLeft, .searchPage__headerRight {
+    display: flex;
+}
+
+.searchPage__headerRight {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchPage__headerRight > .MuiSvgIcon-root {
+    margin-right: 8px;
+}
+
+.searchPage__logo {
+    object-fit: contain;
+    height: 30px;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+.searchPage__headerBody > .search > .search__input {
+    width: unset;
+    margin: unset;
+    height: 20px;
+    max-width: unset;
+}
+
+.searchPage__options {
+    display: flex;
+    align-items: center;
+    color: #70757a;
+    font-size: 13px;
+}
+
+.searchPage__optionsRight, .searchPage__optionsLeft {
+    display: flex;
+}
+
+.searchPage__optionsRight a, .searchPage__options a {
+    text-decoration: navajowhite;
+    color: gray;
+}
+
+.searchPage__optionsRight {
+    margin-left: 80px;
+}
+.searchPage__option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.searchPage__option a {
+    margin-left: 5px;
+}
+
+.searchPage__resultCount {
+    color: #70757a;
+    font-size: 14px;
+}
+
+.searchPage__results {
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: 180px;
+    margin-bottom: 100px;
+}
+
+.searchPage__result {
+    margin: 14px 0 28px 0;
+}
+
+.searchPage__resultTitle {
+    text-decoration: none;
+}
+
+.searchPage__resultTitle:hover {
+    text-decoration: underline;
+}
+.searchPage__resultTitle > h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.searchPage__resultSnippet {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.searchPage__link {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.searchPage__resultImage {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
