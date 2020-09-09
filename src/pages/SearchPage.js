@@ -15,7 +15,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
 
 function SearchPage() {
-    const [{ term }, dispatch] = useStateValue();
+    const [{ user, term }, dispatch] = useStateValue();
 
     //*usually API's have a daily quota limit, to get around this do a single fetch
     //*then go onto the console -> network -> all -> response 
@@ -80,7 +80,11 @@ function SearchPage() {
                 
                 <div className="searchPage__headerRight">
                     <AppsIcon />
-                    <Avatar />
+                    {!user ? (
+                        <Button onClick={() => signIn()}>Login</Button>
+                    ) : (
+                        <Button onClick={() => signOut()}><Avatar alt={user?.displayName} src={user?.photoURL} /></Button>
+                        )}                
                 </div>
             </div>
 
