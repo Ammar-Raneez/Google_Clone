@@ -13,6 +13,8 @@ import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar, Button } from '@material-ui/core';
+import { actionTypes } from '../reducer';
+import { auth, provider } from '../firebase';
 
 function SearchPage() {
     const [{ user, term }, dispatch] = useStateValue();
