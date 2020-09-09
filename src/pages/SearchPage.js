@@ -12,7 +12,7 @@ import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import AppsIcon from '@material-ui/icons/Apps';
-import { Avatar } from '@material-ui/core';
+import { Avatar, Button } from '@material-ui/core';
 
 function SearchPage() {
     const [{ user, term }, dispatch] = useStateValue();
@@ -27,6 +27,21 @@ function SearchPage() {
     // const data = response;
 
     console.log(data)
+
+    const signIn = event => {
+        auth.signInWithPopup(provider)
+        .then(res => {
+            dispatch({
+                type: actionTypes.SET_USER,
+                user: res.user
+            })
+        })
+        .catch(err => alert(err.message))
+    }
+
+    const signOut = event => {
+        auth.signOut()
+    }
 
     return (
         <div className="searchPage">
